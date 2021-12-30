@@ -2,11 +2,11 @@
 interface CreateCourseDTO {
   name: string;
   duration: number;
-  educator: string;
+  educator?: string;
 }
 
 class CreateCourseService {
-  execute({ name, duration, educator }: CreateCourseDTO) {
+  execute({ name, duration, educator = "Dani" }: CreateCourseDTO) {
     return { name, duration, educator }
   }
 }
